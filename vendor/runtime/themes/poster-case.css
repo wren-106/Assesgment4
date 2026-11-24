@@ -1,0 +1,274 @@
+/* 主题：Poster Case（海报案卷）
+ * 标签：noir / poster / 悬疑
+ * 一句话：红黑满版的海报版面。标题宋体压到 900、行高收到 0.92，标签全大写拉宽到 0.24em，
+ *         圆角全零，靠「白字 / 红面 / 黑场」三块的硬切做冲击，不靠装饰。
+ * 默认配色：magpie-blood
+ * 在 tokens.css 之后引入。规则见 references/themes.md。
+ *
+ * 和 case-file 的区别：case-file 是「纸面案卷」（浅底为主、红只做锚点）；
+ * 本主题是「影院海报」（黑红为主、白字压满），给需要视觉冲击的悬疑/调查类稿子。
+ *
+ * 本主题新增的类（4 个）：
+ *   .s-ink     墨黑块：背景取 --bg、圆角为零。红页上的黑色压场块、黑底上的「比黑更实」的面都靠它 ——
+ *              --surface-2 是深红不是黑，红页上要一块纯黑只能用这个类。
+ *   .s-frame   一圈直角细描边，颜色跟随 currentColor —— 给证据照片、引文块做硬边构图。
+ *   .t-ghost   空心大字：填充透明、只留描边。配 .t-display / .t-metric 用在章节巨型编号上（01 / 02 …），
+ *              压在满版照片上不抢画面，又能看出体量。
+ *   .t-vlabel  竖排小标签：writing-mode 竖排、字距 0.3em。给左缘的章号、英文 rail 用。
+ *
+ * 字体只用本机的：Noto Serif SC / Noto Sans SC，退路落到宋体 / 微软雅黑。
+ * 不 @import 任何在线字体 —— 断网不阻塞，字宽确定，版面不跳。
+ */
+
+:root {
+  /* 全直角 */
+  --radius-s: 0;
+  --radius-m: 0;
+  --radius-l: 0;
+
+  --font-serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font: var(--font-sans);
+}
+
+/* 标题：宋体顶到 900（Noto Serif SC 是可变字体，必须用 font-variation-settings 才真的变粗）。
+   行高压到 0.92 —— 海报字的行距要比正文紧，两行叠在一起才有块面感。 */
+.t-display {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+}
+.t-h1 {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+.t-h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+.t-metric {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  line-height: 0.86;
+  letter-spacing: -0.02em;
+}
+
+/* 正文：黑体。海报稿上正文是配角，行高略放到 1.5，让它在满版图旁边不挤。 */
+.t-body {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* 标签：全大写 + 0.24em 字距，模拟海报上的英文 rail。 */
+.t-label {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.24em;
+}
+
+/* 新增类 1：墨黑块。背景取 --bg，圆角为零 —— 红页上的纯黑压场块靠它。 */
+.s-ink {
+  background: var(--bg);
+  border-radius: 0;
+}
+
+/* 新增类 2：直角细描边。颜色跟随 currentColor（黑底上是纸白，红面上一律加 .t-on-surface）。 */
+.s-frame {
+  outline: 2px solid currentColor;
+  outline-offset: 0;
+}
+
+/* 新增类 3：空心大字。配 .t-display 用，描边 4px 在当前文字色上。 */
+.t-ghost {
+  color: transparent;
+  -webkit-text-stroke: 4px var(--accent);
+  paint-order: stroke fill;
+}
+
+/* 新增类 4：竖排小标签。字号跟随 .t-label（24px），不自己定字号。 */
+.t-vlabel {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.3em;
+  line-height: 1;
+}
+
+/* 新增类 5：巨数字。无衬线 900、负字距、行高 0.78。
+   一页只放一个数，字号给到 380px 以上，让它自己成为画面；
+   小数点和百分号另用 .r-key 染红，是整页唯一的一块红。
+   借 huashu「黑底大数字舞台」的版式。 */
+.t-mega {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  line-height: 0.78;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 新增类 6：句内强调。只染色、不加粗 —— 一句话里只有这几个字换色，
+   面积小但重量大。借 huashu「全文字宣言」的做法：
+   红不是背景，是把句子劈开的那一刀。
+   注意这个配色里 --accent 是纸白，红在 --surface —— 所以染红要取 surface。 */
+.r-key {
+  color: var(--surface);
+}
+
+/* 新增类 7：结论条。底部一句「所以呢」，箭头直接写在正文里（不用伪元素，
+   否则导出 PPTX 时箭头会丢）。借 dashi 每页底部的「→ 一句话结论」横条。 */
+.t-concl {
+  font-family: var(--font-sans);
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+/* 新增类 8：发丝线。1px 细线，做状态栏、分隔、外框，不抢任何东西。
+   借 huashu「暗底发丝线终端」的顶部状态栏与内嵌外框。 */
+.s-hair {
+  background: currentColor;
+  opacity: 0.26;
+  border-radius: 0;
+}
+
+/* 区间号：t-mega 的负字距会把 en dash 拉成一根笨重的横线，缩到 0.58em 提上去，
+   读起来是「6 到 8」而不是「6 减 8」。 */
+/* 区间号不写字，画一条线：连字符在数字字体里太细太长（380px 下能拉成 200px，
+   看着像「6 减 8」）。宽高和基线都按 em 定，跟着字号自己缩放。 */
+.t-mega .dash {
+  display: inline-block;
+  /* 340px 字号下 0.05em=17px，读起来像一根粗杠；收到 0.032em 才是排字意义上的连接号 */
+  width: 0.17em;
+  height: 0.032em;
+  background: currentColor;
+  vertical-align: 0.26em;
+  margin: 0 0.03em;
+  overflow: hidden;
+}
+
+/* 新增类 9：暗角。整页铺一层椭圆的暗，边缘沉下去、中心留亮 ——
+   探案片的画面从来没有均匀的光。铺满画布用，不写 left/top。
+   压在照片上时透明度给 0.85，压在纯黑底上给 0.6。 */
+.s-vignette {
+  background: radial-gradient(ellipse 62% 62% at 50% 46%,
+              rgb(0 0 0 / 0) 0%, rgb(0 0 0 / 0.32) 55%, rgb(0 0 0 / 0.86) 100%);
+  border-radius: 0;
+}
+
+/* 新增类 10：证物编号牌。一个纸白实心小方块，里面是黑色编号 ——
+   像现场勘查时插在证物旁的那块牌子。字号跟着 .t-label 走，不自定。 */
+.t-plate {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: var(--accent);
+  color: var(--text-on-accent);
+  padding: 0.22em 0.5em;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* 新增类 11：证据条。照片墙里的一格：直角硬边 + 一道压边的暗，
+   图底下留一条黑带放编号。图用 .s-frame 收边。 */
+.s-plate-frame {
+  border: 2px solid currentColor;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* 新增类 12：印章。把一句话斜着盖在图上，像结案时盖的那一枚 ——
+   只有描边、无填充，字距拉宽。用 data-anim="zoom" 落下来。 */
+.t-stamp {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: var(--surface);
+  border: 4px solid var(--surface);
+  padding: 0.18em 0.42em;
+  line-height: 1;
+  transform: rotate(-7deg);
+}
+
+/* ══════ 新增类 13–19：把「纸」当物件用（2026-11-23 十一页版） ══════
+   明暗节奏不靠整页刷白，靠纸的面积变化。纸只以「纸片」出现：
+   拍立得相纸、剪报条、卷宗标签、胶带。 */
+
+/* 13 整页纸白。只给换气页用，一稿不超过两页 —— 用多了红就不再是事件。 */
+.s-paper {
+  background: #f4f1ea;
+  color: #0b0b0b;
+  border-radius: 0;
+}
+
+/* 14 纸上的字。纸底上的元素不继承 --text（那是纸白），必须显式压黑。 */
+.t-on-paper {
+  color: #0b0b0b;
+}
+.t-on-paper-dim {
+  color: #5b564e;
+}
+
+/* 15 打字机字体。给剪报、标签、编号用 —— 案卷里的字是打出来的，不是排出来的。 */
+.t-type {
+  font-family: "Courier New", "Consolas", ui-monospace, monospace;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* 16 剪报条。一块纸白，黑字，四周留白很窄 —— 像从报纸上剪下来的一行。
+   贴在黑页上就是唯一一块亮，贴在纸页上就靠一道细边区分。 */
+.t-clip {
+  background: #f4f1ea;
+  color: #0b0b0b;
+  padding: 0.42em 0.7em 0.46em;
+  line-height: 1.25;
+  border-radius: 0;
+  /* 坑：运行时默认 content-box，写 width:400 的元素实际占 442，右侧会顶出安全区。
+     剪报是唯一带 padding 的类，在这里收成 border-box，width 就是肉眼看到的宽度。 */
+  box-sizing: border-box;
+}
+
+/* 17 胶带。半透明纸色，压在照片角上，让人相信这张照片是"贴上去的"。 */
+.s-tape {
+  background: rgb(244 241 234 / 0.55);
+  border-left: 1px solid rgb(255 255 255 / 0.35);
+  border-right: 1px solid rgb(255 255 255 / 0.35);
+  border-radius: 0;
+}
+
+/* 18 红线。图钉之间的那根线，比 s-hair 粗、比它红。 */
+.s-redline {
+  background: var(--surface);
+  border-radius: 0;
+}
+
+/* 19 图钉。红点 + 一点暗芯，钉在红线的端点上。 */
+.s-pin {
+  background: var(--surface);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px rgb(11 11 11 / 0.35);
+}
+
+/* 20 左侧压暗。满版图上放左对齐大字时用 —— 图中央最亮，字压上去会被吃掉。
+   不能整张图压暗（那样图就没层次了），只把左半边做成渐变，右半边仍透原图。 */
+.s-scrim-l {
+  background: linear-gradient(
+    90deg,
+    rgb(11 11 11 / 0.94) 0%,
+    rgb(11 11 11 / 0.88) 44%,
+    rgb(11 11 11 / 0.55) 70%,
+    rgb(11 11 11 / 0) 100%
+  );
+  border-radius: 0;
+  pointer-events: none;
+}

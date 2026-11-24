@@ -1,0 +1,36 @@
+/* 配色：血色案卷（Magpie Blood）
+ * 一句话：#0B0B0B 墨黑底 + #C4141F 猩红面 + #F4F1EA 纸白强调。红是**主色**，不再只是点缀：
+ * 一半页面是黑底白字，另一半是整页猩红（用 .s-surface 铺满画面），两者硬切、正负翻转。
+ * 在主题之后引入 —— 它只定义那 10 个颜色变量，盖掉主题里的同名值。
+ *
+ * 变量映射：
+ *   --bg          墨黑 #0B0B0B（黑页底色，全稿的主底）
+ *   --surface     猩红 #C4141F（整页红页、红色大面板、黑卡的反面）
+ *   --surface-2   深红 #8A1019（红面上的次级块、压在红页上的小卡片）
+ *   --text        纸白 #F4F1EA（黑底上的字）
+ *   --text-dim    灰米 #A39C90（黑底上的说明文字）
+ *   --text-on-surface  暖白 #F7F2E7（红面与深红面上的字）
+ *   --accent      纸白 #F4F1EA（细线、序号、强调条 —— 在后两个底色上都最扎眼）
+ *   --accent-soft 旧纸 #C9C0AE（需要「第二白」时用：压一层旧纸色的块）
+ *   --text-on-accent   墨黑 #0B0B0B（纸白块、旧纸块上的字）
+ *   --accent-text      纸白 #F4F1EA（.t-metric / .t-accent 落在黑底上就是白数字）
+ *
+ * 可以互变的颜色：accent ↔ accent-soft（都是纸白的深浅两档）；surface ↔ surface-2（同一个红的两档）。
+ * **不能互变**：surface（猩红）与 accent（纸白）明度差极大，形态变换会在中途闪一下脏色 —— 红块要变白块，改用手法换掉。
+ *
+ * 为什么 accent 是白而不是红：红已经做了 --surface。强调色要在**黑底和红底上都显眼**，
+ * 只有纸白能同时做到（黑底 16:1，红底 5.4:1）。红文字只出现在红页的深红块上（走 --text-on-surface）。
+ */
+
+:root {
+  --bg: #0b0b0b;
+  --surface: #c4141f;
+  --surface-2: #8a1019;
+  --text: #f4f1ea;
+  --text-dim: #a39c90;
+  --text-on-surface: #f7f2e7;
+  --accent: #f4f1ea;
+  --accent-soft: #c9c0ae;
+  --text-on-accent: #0b0b0b;
+  --accent-text: #f4f1ea;
+}

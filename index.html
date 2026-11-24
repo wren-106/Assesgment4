@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="ulrbSEocFfzjQ4HbXxo7mz">
+<head data-page-node-id="2FyW4D4Rv8sfCtu54c2PZb">
+<meta charset="utf-8" data-page-node-id="BBpYqDbBeVc3n8L0cabQhI">
+<title>信息茧房 · 算法对公众认知的无声谋杀</title>
+<meta name="description" content="一份十页的案卷：算法如何把公众认知收窄成一条缝。HTML 放映稿，方向键翻页，按 P 自动演播。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml" data-page-node-id="fAvIcoN01">
+<link rel="stylesheet" href="vendor/node_modules/reveal.js/dist/reset.css" data-page-node-id="98EyEMdJ3cNOvk6CBrEqnj">
+<link rel="stylesheet" href="vendor/node_modules/reveal.js/dist/reveal.css" data-page-node-id="vsAx0VF5DFbujyMY9NYlnr">
+<link rel="stylesheet" href="vendor/runtime/tokens.css" data-page-node-id="mQE2xyhP7RC5LjGvJ5yT13">
+<link rel="stylesheet" href="vendor/runtime/themes/poster-case.css" data-page-node-id="GqfLL58bMDwVzCnbEe9WlQ">
+<link rel="stylesheet" href="vendor/runtime/palettes/magpie-blood.css" data-page-node-id="VD5nqGdOYAuwkp1u0I5DWm">
+</head>
+<body data-page-node-id="1F6PJMtGI743wfMt1yHy9F">
+<div class="reveal" data-page-node-id="3BF1GlxMYkIbZPFcqhpbjj">
+<div class="slides" data-page-node-id="PmjGPmKLCaUsjdoY5hhuk4">
+
+<!-- 十一页的分工与明暗节奏
+   01 黑  封面：满版图 + 印章 + 剪报（三层：图 / 标题 / 物证）
+   02 黑  片头：6 秒短片满版（配乐在有声版里，点画面触发）
+   03 红  目录：六章 + 侦探剪影水印
+   04 黑  现场：手机海横摇，压一张推荐页特写
+   05 白  溯源：木刻喜鹊 + 两条定义 + 打字机剪报   ← 换气页
+   06 黑  手法：三步闭环 + 线团
+   07 红  规模与反证：95.4% / 6–8% 同屏，左边几乎全部，右边要放大镜  ← 原 06+07 合并
+   08 黑  实验：30 天窄化 + 阶梯
+   09 白  物证：四张拍立得 + 红线 + 编号牌        ← 换气页
+   10 黑  症状：三类症状 + 手电追光
+   11 黑  结尾：破茧满版 + 判决 + 三条行动
+
+   明暗：黑 7 / 白 2 / 红 2，最长连续黑页 2 页（01→02）。
+   转场：十刀各不相同，方向和色幕轮流，不连用同一招。
+     01→02 整页推近   从封面推进画面中央，落进片子第一帧（深夜屏幕亮起）
+     02→03 淡出淡入   放完灯亮，红页浮上来 —— 全片唯一一次 fade
+     03→04 黑幕下压   红页被盖住，落进案发现场
+     04→05 纸幕上升   白纸自己盖上来，滑出去时就是这一页
+     05→06 黑幕下压   关灯
+     06→07 红幕横扫   唯一一次红从右侧涌进来，同色接红页，无缝
+     07→08 黑幕下压   红被黑盖住（原 07→08 的匹配剪辑不成立：合并页是红底）
+     08→09 纸幕上升   物证铺到白桌上
+     09→10 黑幕横扫   熄灯
+     10→11 纸幕快闪   白光淹过，散去是破茧
+   导轨：11 页都挂 data-id=rail / prog，线一直在，只是变长 —— 观众始终在同一份卷宗里。
+-->
+
+<!-- ═══ 01 封面 · 满版图 + 物证 ═══ -->
+<section data-auto-animate data-hold="5" data-page-node-id="aC1KzeePpRD9Yc5iNtTlQy">
+  <img src="art/04-cocoon.jpg" alt="" style="left:0px; top:0px; width:1920px; height:1080px; object-fit:cover;" data-page-node-id="aZyBxAoqG0UP8W9GaCxZkG">
+  <div class="s-ink" style="left:0px; top:0px; width:1920px; height:1080px; opacity:0.38; border-radius:0;" data-page-node-id="nudmJKXnVMxLj7JH4FM4lQ"></div>
+  <div class="s-vignette" style="left:0px; top:0px; width:1920px; height:1080px; opacity:0.9;" data-page-node-id="izCugIbGk4gV2r89qObtX7"></div>
+  <div class="s-ink" style="left:0px; top:0px; width:740px; height:1080px; border-radius:0;" data-page-node-id="1vcWSF9p8Ht1KcwtbX83Kw"></div>
+
+  <p class="t-label t-dim" data-anim="fade .7s" style="left:120px; top:120px;" data-page-node-id="II9tZO4zEm9iqajp5AEtfJ">CASE FILE · 2026</p>
+  <p class="t-display" data-anim="emerge .9s @.15" style="left:120px; top:296px;" data-page-node-id="7GDQUj9Xw3EP1GBcuXG6Ck">信息</p>
+  <p class="t-display" data-zoom="m" data-anim="emerge .9s @.3" style="left:120px; top:452px;" data-page-node-id="rhpruyFHoGTxFc0zOeAHvE">茧房</p>
+  <div data-id="rail" class="s-accent" data-anim="wipe left 1.1s @.9" style="left:120px; top:660px; width:400px; height:4px; border-radius:0;" data-page-node-id="poFtpBVvrxgncumfNBrTtP"></div>
+  <p class="t-h2" data-anim="fade .7s @1.3" style="left:120px; top:706px; width:620px;" data-page-node-id="X8JkS9piWYhWWADML6yss8">算法对普通公众的无声谋杀</p>
+  <p class="t-label t-dim" data-anim="fade .6s @1.05" style="left:120px; top:812px;" data-page-node-id="UrQZ3TlfEOlGt12XyEMBql">THE QUIET MURDER</p>
+  <p class="t-label t-dim" data-anim="fade .6s @1.12" style="left:120px; top:852px;" data-page-node-id="zTPh21xgwQFGgsI2CqYgOM">OF THE PUBLIC MIND</p>
+  <p class="t-label t-dim" data-anim="fade .6s @1.25" style="left:120px; top:948px;" data-page-node-id="i58TKyx1iSiGNPUUnSqixd">传播学 · 网络与新媒体</p>
+  <p class="t-label t-dim" data-anim="fade .6s @1.3" style="left:560px; top:948px; width:120px; text-align:right;" data-page-node-id="2Bxc8LvmAtILwaMU6f2pEu">01 / 10</p>
+
+  <!-- 物证层 1：右上角的机密章（描边，不填色，压在图上不当主体）。
+       data-id="stamp"：这枚章是 01→02 唯一的共享元素。它不是"贴着看"的装饰，
+       是这份卷宗一直握在手里的凭据 —— 翻页时它不动，只在红页上反相成纸白。 -->
+  <p class="t-stamp t-label" data-id="stamp" data-anim="zoom .7s @1.5" style="left:1520px; top:176px; width:250px; box-sizing:border-box; text-align:center;" data-page-node-id="DxYlSMDjNkOtY9ZGmX9pHm">TOP SECRET</p>
+  <!-- 物证层 2：一句被听来的话，剪报形式贴在画面暗处。
+       红线用 surface-2 而不是 surface：1→2 是平滑翻页，上一页任何一块 surface 色的矩形
+       都会被 PowerPoint 自动配上第 2 页那张整幅红底，凭空长出一条红幕。 -->
+  <div class="s-redline" style="left:1210px; top:742px; width:2px; height:96px; background:#8a1019;" data-page-node-id="lPItlhWsTBoYUliKUGFEnu"></div>
+  <div class="s-pin" style="left:1204px; top:736px; width:14px; height:14px;" data-page-node-id="7l9dJjCILaYjcGgNe9apfT"></div>
+  <p class="t-clip t-type" data-anim="fade .6s @1.7" style="left:1210px; top:838px; width:560px; font-size:26px;" data-page-node-id="840Scq6E6QiAjdoAZtl1EP">「我没有选择，我只是点了。」</p>
+  <p class="t-label t-dim" style="left:1210px; top:912px; font-size:20px;" data-page-node-id="fzDmqviiXhZgkODgwBGjNO">第 47 次刷新之后 · 受访者原话</p>
+</section>
+
+<!-- ═══ 02 目录 · 红页 ═══ -->
+<section data-auto-animate data-hold="3" data-page-node-id="QfCYJ4hEptG4CoRJgUgDgJ">
+  <div class="s-surface" style="left:0px; top:0px; width:1920px; height:1080px; border-radius:0;" data-page-node-id="jxY1dEYgpxLkOAWFWfGEzA"></div>
+
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#f7f2e7;" data-page-node-id="LM4KQTSNo9TxQLbjs81ltu"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:336px; height:4px; border-radius:0;" data-page-node-id="r9FcpWvBKazxmx4Qj6jAZX"></div>
+  <p class="t-label" style="left:120px; top:112px; color:rgb(247 242 231 / 0.72);" data-page-node-id="w0DM2ImnRDQiOzfx5VXWcI">CLUE 01 · 六章</p>
+  <p class="t-label" style="left:1740px; top:112px; width:60px; text-align:right; color:rgb(247 242 231 / 0.72);" data-page-node-id="vZvR6Sc2ir3vzERbeR2NJd">02</p>
+
+  <!-- 侦探剪影当水印：红底上的黑剪影，正负翻转，不做主体 -->
+  <img src="art/elem/detective.png" alt="" style="left:1470px; top:150px; width:300px; height:948px; object-fit:contain; opacity:0.20;" data-page-node-id="oNRcGBniPpbzF0GF4KgSFk">
+
+  <p class="t-h1 t-on-surface" style="left:120px; top:176px;" data-page-node-id="w3fUla26Epg1wBUbHFKCcn">六章</p>
+  <p class="t-label" style="left:330px; top:214px; color:rgb(247 242 231 / 0.6);" data-page-node-id="lh7uNqnjqxMACfOLkBqgqA">SIX FILES</p>
+
+  <!-- 六条：编号（打字机）+ 标题 + 一句 -->
+  <p class="t-type" data-step="1" data-anim="rise .45s" style="left:120px; top:306px; width:60px; font-size:30px; color:rgb(247 242 231 / 0.66);" data-page-node-id="UlNShGxa5WbRtnrjgNgEIv">01</p>
+  <p class="t-h2 t-on-surface" data-step="1" data-anim="rise .45s" style="left:196px; top:296px; width:480px;" data-page-node-id="bIZxWJvPmZBtsoTgytT3eX">现场</p>
+  <p class="t-body" data-step="1" data-anim="rise .5s" style="left:196px; top:364px; width:470px; font-size:26px; color:rgb(247 242 231 / 0.78);" data-page-node-id="jqA16vCMBLuQdH0sVecegA">三个你经历过的深夜</p>
+  <div class="s-hair" data-step="1" data-anim="fade .4s" style="left:120px; top:428px; width:1140px; height:1px; color:#f7f2e7;" data-page-node-id="GnohRrxbRMQYIPsitQjiLK"></div>
+
+  <p class="t-type" data-step="2" data-anim="rise .45s" style="left:120px; top:466px; width:60px; font-size:30px; color:rgb(247 242 231 / 0.66);" data-page-node-id="e0uAi0WppgmU0r8D2tHGSR">02</p>
+  <p class="t-h2 t-on-surface" data-step="2" data-anim="rise .45s" style="left:196px; top:456px; width:480px;" data-page-node-id="vocqAKJBuT7q4yBQuN95x0">溯源</p>
+  <p class="t-body" data-step="2" data-anim="rise .5s" style="left:196px; top:524px; width:470px; font-size:26px; color:rgb(247 242 231 / 0.78);" data-page-node-id="iDB17RS9jcESSluUPux7mC">2006 年的一个比喻</p>
+  <div class="s-hair" data-step="2" data-anim="fade .4s" style="left:120px; top:588px; width:1140px; height:1px; color:#f7f2e7;" data-page-node-id="HQWmQKPg7KI11aalyECZa9"></div>
+
+  <p class="t-type" data-step="3" data-anim="rise .45s" style="left:120px; top:626px; width:60px; font-size:30px; color:rgb(247 242 231 / 0.66);" data-page-node-id="iJv4EZz54FPV6bKSAnYf8K">03</p>
+  <p class="t-h2 t-on-surface" data-step="3" data-anim="rise .45s" style="left:196px; top:616px; width:480px;" data-page-node-id="jMovI7xByzwrITyDrGTglD">手法</p>
+  <p class="t-body" data-step="3" data-anim="rise .5s" style="left:196px; top:684px; width:470px; font-size:26px; color:rgb(247 242 231 / 0.78);" data-page-node-id="OpzCNb66ad2gYESvjN5m2u">记录、预测、推送，三步闭环</p>
+  <div class="s-hair" data-step="3" data-anim="fade .4s" style="left:120px; top:748px; width:1140px; height:1px; color:#f7f2e7;" data-page-node-id="e3BBpYqfidsIOltZLuHTgb"></div>
+
+  <p class="t-type" data-step="4" data-anim="rise .45s" style="left:120px; top:786px; width:60px; font-size:30px; color:rgb(247 242 231 / 0.66);" data-page-node-id="Q34cXwfiNek8GoEoHidT0m">04</p>
+  <p class="t-h2 t-on-surface" data-step="4" data-anim="rise .45s" style="left:196px; top:776px; width:480px;" data-page-node-id="MZcRvY7g5gTWHs2b3tsUGx">规模 · 反证 · 实验</p>
+  <p class="t-body" data-step="4" data-anim="rise .5s" style="left:196px; top:844px; width:470px; font-size:26px; color:rgb(247 242 231 / 0.78);" data-page-node-id="eZOnHoCjtFzBabuHe1xUW8">95.4%，和那个小得多的数</p>
+  <div class="s-hair" data-step="4" data-anim="fade .4s" style="left:120px; top:908px; width:1140px; height:1px; color:#f7f2e7;" data-page-node-id="kQZMNlFU8cA3dnLKpcRtG7"></div>
+
+  <p class="t-type" data-step="5" data-anim="rise .45s" style="left:820px; top:306px; width:60px; font-size:30px; color:rgb(247 242 231 / 0.66);" data-page-node-id="MkfRFttkw2lepFvRuh8aTa">05</p>
+  <p class="t-h2 t-on-surface" data-step="5" data-anim="rise .45s" style="left:896px; top:296px; width:380px;" data-page-node-id="Ywn1baDZSNgtBB8evFMiqw">物证</p>
+  <p class="t-body" data-step="5" data-anim="rise .5s" style="left:896px; top:364px; width:370px; font-size:26px; color:rgb(247 242 231 / 0.78);" data-page-node-id="8a2rKH1CEyYAJLZPgMCpgj">四张照片，一条红线</p>
+  <p class="t-type" data-step="6" data-anim="rise .45s" style="left:820px; top:466px; width:60px; font-size:30px; color:rgb(247 242 231 / 0.66);" data-page-node-id="rjqqAHNDZbuR53I81VLcii">06</p>
+  <p class="t-h2 t-on-surface" data-step="6" data-anim="rise .45s" style="left:896px; top:456px; width:380px;" data-page-node-id="xtLmggqNdCRuUOOitQm8L0">症状 · 破茧</p>
+  <p class="t-body" data-step="6" data-anim="rise .5s" style="left:896px; top:524px; width:370px; font-size:26px; color:rgb(247 242 231 / 0.78);" data-page-node-id="tMjyIQVLZK3vDnkGrDxb0d">你并不知道自己在茧里</p>
+
+  <p class="t-label" style="left:120px; top:952px; color:rgb(247 242 231 / 0.62);" data-page-node-id="pgMgmGynRCdkTPD8MBlI40">按 → 逐章展开　PRESS TO REVEAL</p>
+
+  <!-- 01 那枚章留了下来：同位置、同尺寸，只是红描边反相成纸白。
+       共享元素转场时它一动不动，其余全换 —— 观众会觉得「还是这份卷宗，只是翻了一页」。 -->
+  <p class="t-stamp t-label" data-id="stamp" style="left:1520px; top:176px; width:250px; box-sizing:border-box; text-align:center; color:#f7f2e7; border-color:#f7f2e7;" data-page-node-id="sTampOnRed02">TOP SECRET</p>
+</section>
+
+<!-- ═══ 03 案发现场 · 满版横摇 ═══ -->
+<section data-auto-animate data-hold="9" data-st="mask" data-st-direction="down" data-st-mask-color="bg" data-st-duration="0.8" data-page-node-id="t2RpMlqHoiDGXwTIIbCTVt">
+  <img src="art/03-arena.jpg" alt=""
+       data-path="0 1300 540 0; 8 620 540 0"
+       style="left:0px; top:-191px; width:2600px; height:1462px; object-fit:cover;" data-page-node-id="gYHxDW0EE6iRVgPAAFMPfh">
+  <div class="s-ink" style="left:0px; top:0px; width:1920px; height:1080px; opacity:0.2; border-radius:0;" data-page-node-id="vHiFDvZiKkwVWV6t9qRT2I"></div>
+  <div class="s-vignette" style="left:0px; top:0px; width:1920px; height:1080px; opacity:0.95;" data-page-node-id="MJjNvKKJaV3bylKrHNpSRE"></div>
+
+  <!-- 贯穿导轨从红页跟过来：卷宗读到第几页，这条线一直在 -->
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#f7f2e7;" data-page-node-id="rAilP03"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:504px; height:4px; border-radius:0;" data-page-node-id="pRogP03"></div>
+
+  <p class="t-label t-dim" style="left:120px; top:120px;" data-page-node-id="xI0o3nztlEN4tE7bOyVvvT">CASE 01 · 案发现场</p>
+  <p class="t-label t-dim" style="left:1740px; top:120px; width:60px; text-align:right;" data-page-node-id="ziqapG2dEe12G5tCDy82oI">03</p>
+
+  <svg style="left:120px; top:596px; width:44px; height:44px;" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" data-page-node-id="63DlVe4Xp8ICrN3eEVslA7">
+    <circle cx="24" cy="24" r="16" data-page-node-id="esgsjmEunojojSnfux764u"/><line x1="24" y1="24" x2="24" y2="11" data-page-node-id="HQLxc63ultd65UW9Z9tK1Q"/><line x1="24" y1="24" x2="34" y2="29" data-page-node-id="QOlEr1ckt6H7N74uB3z3IE"/>
+  </svg>
+  <p class="t-label" style="left:180px; top:604px;" data-page-node-id="n7ih3gdZdAq9LBecSiAPeH">02:47　第 47 次刷新</p>
+
+  <p class="t-h1" data-anim="rise .7s @.4" style="left:120px; top:676px;" data-page-node-id="TWBwKFoL72BEBtpK4Ai9qt">你以为是自制力</p>
+  <p class="t-h1" data-anim="rise .7s @.55" style="left:120px; top:762px;" data-page-node-id="ZZpzdDNp40tgKgJlCIZcEH">其实是有人在选</p>
+  <div class="s-accent" data-anim="rise .8s @.9" style="left:120px; top:856px; width:430px; height:3px; border-radius:0;" data-page-node-id="tqbheTjgQWwhnjPDWqaKK9"></div>
+
+  <!-- 物证层：一张推荐页截屏，斜贴着，用胶带固定 -->
+  <img src="art/elem/phone.png" alt="" data-anim="fly down .7s @1.2"
+       style="left:1420px; top:250px; width:250px; height:470px; object-fit:contain; transform:rotate(5deg);" data-page-node-id="cderTBgZAV6JNUmCjCD1Sf">
+  <div class="s-tape" data-anim="fade .4s @1.5" style="left:1402px; top:232px; width:120px; height:34px; transform:rotate(-9deg);" data-page-node-id="rwHgCUEf2vu9zVBuKLFXlQ"></div>
+  <p class="t-label t-dim" style="left:1380px; top:748px; width:420px; font-size:20px; white-space:normal;" data-page-node-id="rvHyAhmNtrGZwDKDMPv74z">推荐页 · 未搜索<br data-page-node-id="1ASoE6jw81t7gKqxbtL9ex">全部来自「猜你喜欢」</p>
+</section>
+
+<!-- ═══ 04 溯源 · 纸白换气页 ═══ -->
+<section data-auto-animate data-hold="3" data-st="mask" data-st-direction="up" data-st-mask-color="accent" data-st-duration="0.85" data-page-node-id="BaIDXnOfvyCZ1TKMz5AQ6G">
+  <div class="s-paper" style="left:0px; top:0px; width:1920px; height:1080px;" data-page-node-id="JrNoQDPe8xSChsu3t19KQ2"></div>
+
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#0b0b0b;" data-page-node-id="NBOQzdcJ4cQGELuxBRY0Q0"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:672px; height:4px; border-radius:0; background:#0b0b0b;" data-page-node-id="h7CAecdSa2KyH3xIEGzh5t"></div>
+  <p class="t-label t-on-paper-dim" style="left:120px; top:112px;" data-page-node-id="Cm0ahVEKyyBRF38nGmDiKO">CASE 02 · 概念溯源</p>
+  <p class="t-label t-on-paper-dim" style="left:1740px; top:112px; width:60px; text-align:right;" data-page-node-id="0LYR50rcbMEy7A2YIFQFUY">04</p>
+
+  <!-- 主视觉：木刻喜鹊。纸白页上它是黑线，边缘干净 -->
+  <img src="art/elem/magpie.png" alt="" data-anim="ink 1.5s @.2"
+       style="left:120px; top:226px; width:760px; height:706px; object-fit:contain;" data-page-node-id="vhEiRfLfMCjBDuhYlW7fAS">
+  <!-- 物证层：压在鸟脚下的一枚打字机标签。位置从 884 下移到 952 ——
+       884 时黑字正好压在黑树枝上，整段编号看不见。 -->
+  <p class="t-clip t-type" data-anim="rise .5s @.9" style="left:130px; top:926px; width:470px; font-size:24px; transform:rotate(-1.4deg);" data-page-node-id="Qkc5ExQR0bNObbuNetQOxe">PLATE 01 — PICA PICA</p>
+
+  <!-- 右侧：两条定义，字压在编号上 -->
+  <p class="t-h1 t-on-paper" style="left:940px; top:196px; width:820px; font-size:64px; white-space:normal;" data-page-node-id="acF3jBovAbHUFAykwEVXlp">一个 2006 年的比喻</p>
+  <div class="s-redline" style="left:940px; top:296px; width:120px; height:3px;" data-page-node-id="nNUAPf3DgcGkBSVEgArjso"></div>
+
+  <p class="t-type" data-anim="rise .45s @.4" style="left:940px; top:348px; font-size:26px; color:#8a1019;" data-page-node-id="JaJRuBwk9t2JROOxc7PfED">2006</p>
+  <p class="t-h2 t-on-paper" data-anim="rise .45s @.45" style="left:1010px; top:336px; width:740px; font-size:40px;" data-page-node-id="heTPsTcweuK7heYjqjqqwR">桑斯坦《信息乌托邦》</p>
+  <p class="t-body t-on-paper" data-anim="rise .5s @.55" style="left:1010px; top:400px; width:730px; font-size:30px;" data-page-node-id="fTIBAUWNPG8BTF8OEOhC6u">人只挑让自己舒服的信息，一层层把自己裹起来 —— 像蚕。</p>
+
+  <div class="s-hair" data-anim="fade .4s @.8" style="left:940px; top:492px; width:760px; height:1px; color:#0b0b0b;" data-page-node-id="Fs0aJJWnSki8xXBkGWC63x"></div>
+
+  <p class="t-type" data-anim="rise .45s @.85" style="left:940px; top:536px; font-size:26px; color:#8a1019;" data-page-node-id="1LvIHeWTaIywGGMPCa0IaZ">2011</p>
+  <p class="t-h2 t-on-paper" data-anim="rise .45s @.9" style="left:1010px; top:524px; width:740px; font-size:40px;" data-page-node-id="G11bnrpbbdXXerOJzeeVPg">帕里泽 · TED「过滤气泡」</p>
+  <p class="t-body t-on-paper" data-anim="rise .5s @1" style="left:1010px; top:588px; width:730px; font-size:30px;" data-page-node-id="HxAI8iGKk1E0YV3WNA2C4i">搜索引擎与社交平台把用户隔在「智能隔离」里。演讲播放超 400 万次。</p>
+
+  <div class="s-redline" data-anim="fade .5s @1.3" style="left:940px; top:736px; width:760px; height:3px;" data-page-node-id="C2aH0j3IFWdAsUcrodJOnE"></div>
+  <p class="t-h2 t-on-paper" data-anim="fade .6s @1.4" style="left:940px; top:768px; width:800px; font-size:44px;" data-page-node-id="Lmj2VZX7Ve06COLoIlK0Cz">喜鹊只捡亮的，<br data-page-node-id="Cta4OPXe2bsO0Y098icZZp">算法只捡你点过的。</p>
+  <p class="t-label t-on-paper-dim" style="left:940px; top:912px; width:820px; font-size:18px; line-height:1.7; white-space:normal;" data-page-node-id="PnIBrYDYYWSQodxf6WRBzP">信息茧房 / INFORMATION COCOON<br data-page-node-id="0EicuyBtrZijdScaNLjU5l">过滤气泡 / FILTER BUBBLE</p>
+</section>
+
+<!-- ═══ 05 手法 · 三步闭环 ═══ -->
+<section data-auto-animate data-hold="3" data-st="mask" data-st-direction="down" data-st-mask-color="bg" data-st-duration="0.8" data-page-node-id="l2NkbEPGZiTYTQ5emC1FIW">
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#f7f2e7;" data-page-node-id="rAilP05"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:840px; height:4px; border-radius:0;" data-page-node-id="pRogP05"></div>
+
+  <p class="t-label t-dim" style="left:120px; top:120px;" data-page-node-id="A8HIJd04jdwXXyc2yaBkCB">CASE 03 · 作案手法</p>
+  <p class="t-label t-dim" style="left:1740px; top:120px; width:60px; text-align:right;" data-page-node-id="HH2bVXK3jXpETgfMn9rW9g">05</p>
+
+  <p class="t-h1" style="left:120px; top:176px; font-size:64px;" data-page-node-id="lhxEZ6LFdDgZmAL57Xl04n">三步，闭环</p>
+
+  <!-- 三步：编号牌 + 标题 + 一句 -->
+  <p class="t-plate t-label" data-step="1" data-anim="zoom .4s" style="left:120px; top:296px;" data-page-node-id="2BEUJGB6viEC4OnwmAUNXs">STEP 01</p>
+  <p class="t-h2" data-step="1" data-anim="rise .45s" style="left:120px; top:352px; width:360px;" data-page-node-id="TCnJOQsFHqNevAM19Zri7P">记录</p>
+  <p class="t-body" data-step="1" data-anim="rise .5s" style="left:120px; top:424px; width:350px; font-size:26px;" data-page-node-id="PQrH6gADg8wKFcigVMRLdE">看完还是划走、停留几秒、有没有互动 —— 都变成权重。</p>
+
+  <p class="t-plate t-label" data-step="2" data-anim="zoom .4s" style="left:560px; top:296px;" data-page-node-id="boLYbJcFN378OpCHc6W2D0">STEP 02</p>
+  <p class="t-h2" data-step="2" data-anim="rise .45s" style="left:560px; top:352px; width:360px;" data-page-node-id="nhomf0TI4k70GYOFxetYbx">预测</p>
+  <p class="t-body" data-step="2" data-anim="rise .5s" style="left:560px; top:424px; width:350px; font-size:26px;" data-page-node-id="Eg6w5jwDORkHSI5dTAA5QE">它不推最好的，只推最像你的 —— 把相似当成喜欢。</p>
+
+  <p class="t-plate t-label" data-step="3" data-anim="zoom .4s" style="left:1000px; top:296px;" data-page-node-id="5rpHxei4TjsaX7p35WC9W0">STEP 03</p>
+  <p class="t-h2" data-step="3" data-anim="rise .45s" style="left:1000px; top:352px; width:360px;" data-page-node-id="BaEwPkjipszmV9vlvl7Ttd">推送并强化</p>
+  <p class="t-body" data-step="3" data-anim="rise .5s" style="left:1000px; top:424px; width:350px; font-size:26px;" data-page-node-id="1FY1EmyQvpWsaMTG97C9Jd">你看了，它记下来，再推同类。信息只进不出。</p>
+
+  <!-- 闭环：从第三步一路倒回第一步。用 wipe right（从右往左擦）而不是 fade，
+       观众看到的才是"这条回路被走出来"，而不是"又出现一个图形"。 -->
+  <svg data-step="4" data-anim="wipe right .9s" style="left:120px; top:540px; width:1320px; height:120px; overflow:visible;" viewBox="0 0 1320 120" fill="none" data-page-node-id="UF2W1RhYFWL5JqbRXeLgBS">
+    <path d="M1180 20 L1180 92 L120 92 L120 44" stroke="#c4141f" stroke-width="3" fill="none" data-page-node-id="kTOFpHCj5DFPIATnPkoXGZ"/>
+    <path d="M104 46 L120 18 L136 46 Z" fill="#c4141f" data-page-node-id="qGFLJp766CouQCo86YnHrj"/>
+    <circle cx="120" cy="20" r="7" fill="#c4141f" data-page-node-id="zFOLB62TYSNDzz5GYBshh4"/>
+  </svg>
+  <p class="t-label" data-step="4" data-anim="fade .5s" style="left:600px; top:596px;" data-page-node-id="ayiVWJNaGCZhML2BBGvg7g">正反馈 · 每一圈都更窄一点</p>
+
+  <!-- 线团：这一页的物，压右下。05→06 的红幕从右侧扫进来，第一个吞掉的就是它 ——
+       线索被红色淹没，退潮时已经是 95.4%。 -->
+  <img src="art/elem/thread.png" alt="" data-step="5" data-anim="fade 1s"
+       style="left:1408px; top:250px; width:392px; height:392px; object-fit:contain; opacity:0.95;" data-page-node-id="E2BKTnSgngG0oEx2T0CBWP">
+  <p class="t-label t-dim" data-step="5" data-anim="fade .5s" style="left:1408px; top:664px; width:392px; font-size:20px; line-height:1.7; white-space:normal;" data-page-node-id="z9QAHGZcGqyROBan0XNpTE">每一根线都还在，<br data-page-node-id="PxaiRkex4wGXL7H7hVKEs9">只是看不出头在哪</p>
+
+  <div class="s-hair" style="left:120px; top:832px; width:1680px; height:1px;" data-page-node-id="MUUaQJi4eWfm2NUGy2pgfu"></div>
+  <p class="t-h2" style="left:120px; top:864px; width:1500px; font-size:40px;" data-page-node-id="2MaB6aZHYot7CBTHymNVXo">它不生产内容，只决定你<em class="r-key" style="font-style:normal;" data-page-node-id="ReIQifoXQHQMVcdeLsAmSj">先看见什么</em>。</p>
+</section>
+
+<!-- ═══ 06 规模与反证 · 红页：一个数铺满，一个数要放大镜 ═══ -->
+<!-- 原来这是两页：95.4%（中国网民刷短视频）和 6–8%（英国公众在回声室）。
+     合并的逻辑不是「挤一挤」，是这两个数本来就该在同一画面里被读：
+     左边一个几乎等于全部，右边一个小到需要放大镜 —— 差别本身就是论点。
+     大小只靠字号（296 : 176），不靠虚实：右边那个不是配角，是转折。 -->
+<section data-auto-animate data-hold="9" data-st="mask" data-st-direction="left" data-st-mask-color="surface" data-st-duration="1.1" data-page-node-id="HVw9hG2i9oWKu0EOU7nMCa">
+  <div class="s-surface" style="left:0px; top:0px; width:1920px; height:1080px; border-radius:0;" data-page-node-id="LZcKD55k2ICxzEuLpMsBmm"></div>
+
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#f7f2e7;" data-page-node-id="rAilP06"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:1008px; height:4px; border-radius:0;" data-page-node-id="pRogP06"></div>
+
+  <p class="t-label" style="left:120px; top:120px; color:rgb(247 242 231 / 0.72);" data-page-node-id="htWgybORDYis11dljzpcSq">CASE 04 · 规模与反证</p>
+  <p class="t-label" style="left:1740px; top:120px; width:60px; text-align:right; color:rgb(247 242 231 / 0.72);" data-page-node-id="QHEAAhNMF0DAokQP4drlxf">06</p>
+
+  <!-- ── 左：规模 ─────────────────────────────────────── -->
+  <p data-carry="metric" data-zoom="m" class="t-mega t-on-surface" style="left:120px; top:168px; font-size:296px;" data-page-node-id="RtNnwjuIwNKY8TlZCnqeIb">95.4<span style="font-size:0.34em; vertical-align:0.62em;" data-page-node-id="BC9ZuTJpAS6Vai6Nym50wf">%</span></p>
+  <p class="t-h2 t-on-surface" data-step="1" data-anim="rise .6s @.1" style="left:120px; top:486px; width:840px; font-size:52px;" data-page-node-id="iQ93BWlDqmuHvABZithy44">的中国网民在用短视频</p>
+
+  <div class="s-hair" data-step="1" data-anim="wipe left .75s @.3" style="left:120px; top:592px; width:850px; height:1px; color:#f7f2e7;" data-page-node-id="H5vV7E0QpHa6hwwd9kyfGQ"></div>
+
+<svg style="left:120px; top:616px; width:296px; height:296px;" viewBox="0 0 400 400" fill="none" data-page-node-id="03OxZExN5RAdrHGcuFrngB">
+    <!-- 第 1 批：3 行 -->
+    <g data-step="2" data-anim="fade .45s" data-page-node-id="6rIVNPqOeBhQ185wGKZSLJ">
+      <circle cx="14" cy="14" r="11" fill="#f7f2e7" data-page-node-id="EqZippXcG5FEgtIqAjHVJu"/>
+      <circle cx="54" cy="14" r="11" fill="#f7f2e7" data-page-node-id="FvDMeIP5SI6K8lzZOkmVNQ"/>
+      <circle cx="94" cy="14" r="11" fill="#f7f2e7" data-page-node-id="kINJZBJECspONjpKfmjXJ2"/>
+      <circle cx="134" cy="14" r="11" fill="#f7f2e7" data-page-node-id="GF1EdwLEVgkgUlzKtsTONj"/>
+      <circle cx="174" cy="14" r="11" fill="#f7f2e7" data-page-node-id="QcYPKPX73YCDQeGOKyUWqy"/>
+      <circle cx="214" cy="14" r="11" fill="#f7f2e7" data-page-node-id="FzZkwuGankxTZj1y0zOhZH"/>
+      <circle cx="254" cy="14" r="11" fill="#f7f2e7" data-page-node-id="lpQBPrdxYKYWCWA3nHC5IV"/>
+      <circle cx="294" cy="14" r="11" fill="#f7f2e7" data-page-node-id="wdHPiOUwLRBSBbn4ulNscn"/>
+      <circle cx="334" cy="14" r="11" fill="#f7f2e7" data-page-node-id="DiCsjFGkxy7dkGBhff5ut9"/>
+      <circle cx="374" cy="14" r="11" fill="#f7f2e7" data-page-node-id="l9h6P47AmDmrvJ5iaxQeRj"/>
+      <circle cx="14" cy="54" r="11" fill="#f7f2e7" data-page-node-id="KMAjFhuXzEYbBme68qeMyI"/>
+      <circle cx="54" cy="54" r="11" fill="#f7f2e7" data-page-node-id="rsiQ31FlV0gDBAY9TJ8jfx"/>
+      <circle cx="94" cy="54" r="11" fill="#f7f2e7" data-page-node-id="3BXmj2Nfotgqt4yhrczrD5"/>
+      <circle cx="134" cy="54" r="11" fill="#f7f2e7" data-page-node-id="pgKYXPVbU1N2rWnUpCDgUN"/>
+      <circle cx="174" cy="54" r="11" fill="#f7f2e7" data-page-node-id="qC76EEAREPvEiZzbXaWAH9"/>
+      <circle cx="214" cy="54" r="11" fill="#f7f2e7" data-page-node-id="IK5nTqrxolxrjkIhyBWPKw"/>
+      <circle cx="254" cy="54" r="11" fill="#f7f2e7" data-page-node-id="vTqeaXJ5vEnwoFYJ1VAZpC"/>
+      <circle cx="294" cy="54" r="11" fill="#f7f2e7" data-page-node-id="1Bc9J9VHPibOCbYxWPS2OM"/>
+      <circle cx="334" cy="54" r="11" fill="#f7f2e7" data-page-node-id="vKxGC2JJcobuckAkrNcCHo"/>
+      <circle cx="374" cy="54" r="11" fill="#f7f2e7" data-page-node-id="0vDIodzhB96GoHCBt1vzT8"/>
+      <circle cx="14" cy="94" r="11" fill="#f7f2e7" data-page-node-id="M4O4fJDshMoWQ5IXkWCn28"/>
+      <circle cx="54" cy="94" r="11" fill="#0b0b0b" data-page-node-id="IhBXZsWgQMB8HpCsj7AgcW"/>
+      <circle cx="94" cy="94" r="11" fill="#f7f2e7" data-page-node-id="lqffOGeZ5ShoDcK3pLEbiu"/>
+      <circle cx="134" cy="94" r="11" fill="#f7f2e7" data-page-node-id="BlFLy3iTCdNcxVK4HEwpz3"/>
+      <circle cx="174" cy="94" r="11" fill="#f7f2e7" data-page-node-id="4SiF4XKwomCobcKi44fCqn"/>
+      <circle cx="214" cy="94" r="11" fill="#f7f2e7" data-page-node-id="MyAmxgFgIHzPLLBNACwdJK"/>
+      <circle cx="254" cy="94" r="11" fill="#f7f2e7" data-page-node-id="H1pajgWX2aPiM3k8AgY0vI"/>
+      <circle cx="294" cy="94" r="11" fill="#f7f2e7" data-page-node-id="6i1ahCVyqtHBEsfEvKrAH7"/>
+      <circle cx="334" cy="94" r="11" fill="#f7f2e7" data-page-node-id="GPqT99ExtKPrGc0KnLai77"/>
+      <circle cx="374" cy="94" r="11" fill="#f7f2e7" data-page-node-id="gVeqBSgYVaDARVdVzipvDt"/>
+    </g>
+    <!-- 第 2 批：3 行 -->
+    <g data-step="3" data-anim="fade .45s" data-page-node-id="ZPIkRBMHnSqHB3VBBDzsTS">
+      <circle cx="14" cy="134" r="11" fill="#f7f2e7" data-page-node-id="bzYhGfQvrwrmVgM7CNvgW9"/>
+      <circle cx="54" cy="134" r="11" fill="#f7f2e7" data-page-node-id="xqrhuDcSvujhlw2jDsGPYA"/>
+      <circle cx="94" cy="134" r="11" fill="#f7f2e7" data-page-node-id="hFIhePvF4omqwAy3mggoDl"/>
+      <circle cx="134" cy="134" r="11" fill="#f7f2e7" data-page-node-id="IemhjjIEDuYaFI1otJQ8yV"/>
+      <circle cx="174" cy="134" r="11" fill="#f7f2e7" data-page-node-id="GHv2n2XeuSHmhjYH7zmsjY"/>
+      <circle cx="214" cy="134" r="11" fill="#0b0b0b" data-page-node-id="IKNFUAOACMvCSlyVhKZ1Fg"/>
+      <circle cx="254" cy="134" r="11" fill="#f7f2e7" data-page-node-id="g8Hsl5UOr1xDOL1BkBkiHx"/>
+      <circle cx="294" cy="134" r="11" fill="#f7f2e7" data-page-node-id="xLjif7pVFpMtux1T0cYXzE"/>
+      <circle cx="334" cy="134" r="11" fill="#f7f2e7" data-page-node-id="3CJSBSAKLSKoCUGQfJjphp"/>
+      <circle cx="374" cy="134" r="11" fill="#f7f2e7" data-page-node-id="rVlsiIwl6vZcgsPD12pXbO"/>
+      <circle cx="14" cy="174" r="11" fill="#f7f2e7" data-page-node-id="VRpQTcJBCayanhOCw6J2Fs"/>
+      <circle cx="54" cy="174" r="11" fill="#f7f2e7" data-page-node-id="ytm2kkViluiuR0UrFzjnnD"/>
+      <circle cx="94" cy="174" r="11" fill="#f7f2e7" data-page-node-id="4SFy40wKkMWD1Cun5q5ony"/>
+      <circle cx="134" cy="174" r="11" fill="#f7f2e7" data-page-node-id="8JU6owl6DQOMpTWRHmKe2F"/>
+      <circle cx="174" cy="174" r="11" fill="#f7f2e7" data-page-node-id="iSD2dGuL4Ka1HTqtDbPS78"/>
+      <circle cx="214" cy="174" r="11" fill="#f7f2e7" data-page-node-id="1Ayl5DWNmQuiOSvGulAD1Q"/>
+      <circle cx="254" cy="174" r="11" fill="#f7f2e7" data-page-node-id="rrEoutb0R51ZiRACS0POur"/>
+      <circle cx="294" cy="174" r="11" fill="#f7f2e7" data-page-node-id="VF3REbjF9B4CJIFS70R4LO"/>
+      <circle cx="334" cy="174" r="11" fill="#f7f2e7" data-page-node-id="Hvu2XHt2FN1cXLGT82vm85"/>
+      <circle cx="374" cy="174" r="11" fill="#f7f2e7" data-page-node-id="X8uH0pjJHH93kvJtyWBq87"/>
+      <circle cx="14" cy="214" r="11" fill="#f7f2e7" data-page-node-id="kWYh7LVHGJHQH2WySluA6D"/>
+      <circle cx="54" cy="214" r="11" fill="#f7f2e7" data-page-node-id="TCqS2OHpvBPgtCv8sw6Hd5"/>
+      <circle cx="94" cy="214" r="11" fill="#f7f2e7" data-page-node-id="OJVtJr04dIYtKGBRzMOpBo"/>
+      <circle cx="134" cy="214" r="11" fill="#f7f2e7" data-page-node-id="Izg8F5jLVeJymvPEQdy5AF"/>
+      <circle cx="174" cy="214" r="11" fill="#f7f2e7" data-page-node-id="neAiZGDuuTn4F0NtVTR1E1"/>
+      <circle cx="214" cy="214" r="11" fill="#f7f2e7" data-page-node-id="HnhjwsBT9oYnGyActT1kMW"/>
+      <circle cx="254" cy="214" r="11" fill="#f7f2e7" data-page-node-id="PHShtbqT28BjAfNuGUMHXk"/>
+      <circle cx="294" cy="214" r="11" fill="#f7f2e7" data-page-node-id="JhDL695ZE1i2E8HQCFIpmS"/>
+      <circle cx="334" cy="214" r="11" fill="#0b0b0b" data-page-node-id="yWMaxS87xtovsGJok3a4rX"/>
+      <circle cx="374" cy="214" r="11" fill="#f7f2e7" data-page-node-id="7P4iHnkoLsVkuQ95PE1qpg"/>
+    </g>
+    <!-- 第 3 批：4 行 -->
+    <g data-step="4" data-anim="fade .45s" data-page-node-id="dPCWU4uvDY5MiGprXwtqYp">
+      <circle cx="14" cy="254" r="11" fill="#f7f2e7" data-page-node-id="7yyDdR86heDCl7evIhohK0"/>
+      <circle cx="54" cy="254" r="11" fill="#f7f2e7" data-page-node-id="QBhqqmMwlxjxzQI2agbIOI"/>
+      <circle cx="94" cy="254" r="11" fill="#f7f2e7" data-page-node-id="flIIAWVYZniEEAYZljSTIg"/>
+      <circle cx="134" cy="254" r="11" fill="#f7f2e7" data-page-node-id="EsnAgu1h0UJEiFVfnFW6WX"/>
+      <circle cx="174" cy="254" r="11" fill="#f7f2e7" data-page-node-id="aFqhKrKjWf05uWMqluHtbF"/>
+      <circle cx="214" cy="254" r="11" fill="#f7f2e7" data-page-node-id="UGLrMPs100BThJsCECE4pu"/>
+      <circle cx="254" cy="254" r="11" fill="#f7f2e7" data-page-node-id="yFawtG0Fkiaa69OvFGNKg4"/>
+      <circle cx="294" cy="254" r="11" fill="#f7f2e7" data-page-node-id="FX1FWSZoEiDRWnRVvIKnlO"/>
+      <circle cx="334" cy="254" r="11" fill="#f7f2e7" data-page-node-id="AzmvG237PtiEHN9zvNhEQc"/>
+      <circle cx="374" cy="254" r="11" fill="#f7f2e7" data-page-node-id="WAvw0VVkLtDuA8snPDjdMX"/>
+      <circle cx="14" cy="294" r="11" fill="#f7f2e7" data-page-node-id="2XSDPjUISH2aZ4uM6kmM0g"/>
+      <circle cx="54" cy="294" r="11" fill="#f7f2e7" data-page-node-id="5xBtll8GPQ0Lifr5Q1Xqwx"/>
+      <circle cx="94" cy="294" r="11" fill="#0b0b0b" data-page-node-id="O6tAfwTDkz5BaeEXgIRyxO"/>
+      <circle cx="134" cy="294" r="11" fill="#f7f2e7" data-page-node-id="1A64lIRKrfDFfjTXYvu38r"/>
+      <circle cx="174" cy="294" r="11" fill="#f7f2e7" data-page-node-id="V15UiKZSr500EhTcRAd4Kc"/>
+      <circle cx="214" cy="294" r="11" fill="#f7f2e7" data-page-node-id="dKhok4CzSnZ4f3iA7ohfau"/>
+      <circle cx="254" cy="294" r="11" fill="#f7f2e7" data-page-node-id="6vGi0EdYuwO0mCAbhOnQvs"/>
+      <circle cx="294" cy="294" r="11" fill="#f7f2e7" data-page-node-id="evta3kOIdW870bbSVnQuJL"/>
+      <circle cx="334" cy="294" r="11" fill="#f7f2e7" data-page-node-id="fgnJfRJd5BqfuFZToGysIb"/>
+      <circle cx="374" cy="294" r="11" fill="#f7f2e7" data-page-node-id="2BRv6HynKKu2Jl4Wn5tisW"/>
+      <circle cx="14" cy="334" r="11" fill="#f7f2e7" data-page-node-id="mAPVUB1d4fAiebRenhvEi3"/>
+      <circle cx="54" cy="334" r="11" fill="#f7f2e7" data-page-node-id="FS6Sn9zVczDFDA2OCj5zQt"/>
+      <circle cx="94" cy="334" r="11" fill="#f7f2e7" data-page-node-id="odHKLaAH03fX77Mj3AxK6j"/>
+      <circle cx="134" cy="334" r="11" fill="#f7f2e7" data-page-node-id="4BYXG3r6bjYDYBl59KlGYF"/>
+      <circle cx="174" cy="334" r="11" fill="#f7f2e7" data-page-node-id="SPVlEyh4czHW13JfFCL5s0"/>
+      <circle cx="214" cy="334" r="11" fill="#f7f2e7" data-page-node-id="AKAibK5H6sf0JZYrXGMEFq"/>
+      <circle cx="254" cy="334" r="11" fill="#0b0b0b" data-page-node-id="kpB0FxXHE479q5Zrf4JOCY"/>
+      <circle cx="294" cy="334" r="11" fill="#f7f2e7" data-page-node-id="gIY7wdKqt3AYKpeGyKCevy"/>
+      <circle cx="334" cy="334" r="11" fill="#f7f2e7" data-page-node-id="qJJqBABSeMG0vtYdOPPpZG"/>
+      <circle cx="374" cy="334" r="11" fill="#f7f2e7" data-page-node-id="5fFZiw5tOnvrPRgfVoH7Eh"/>
+      <circle cx="14" cy="374" r="11" fill="#f7f2e7" data-page-node-id="Jp4sHYH2ktoXdjcyCfJAAQ"/>
+      <circle cx="54" cy="374" r="11" fill="#f7f2e7" data-page-node-id="2rlAt2eAyJD5UcJoi91n2t"/>
+      <circle cx="94" cy="374" r="11" fill="#f7f2e7" data-page-node-id="pAgB24Uq6vVy746ZV3bRV8"/>
+      <circle cx="134" cy="374" r="11" fill="#f7f2e7" data-page-node-id="XYa97yAs4XEyLY8bgrB3xr"/>
+      <circle cx="174" cy="374" r="11" fill="#f7f2e7" data-page-node-id="dU5XNUbblcMAwFiGXQqM3z"/>
+      <circle cx="214" cy="374" r="11" fill="#f7f2e7" data-page-node-id="DLdGxDA1vydHjruQnJvH7h"/>
+      <circle cx="254" cy="374" r="11" fill="#f7f2e7" data-page-node-id="PKGwYRyshbJJ0VIvLg2j9u"/>
+      <circle cx="294" cy="374" r="11" fill="#f7f2e7" data-page-node-id="BaKUcVHbbb7Mjp00DHGsoc"/>
+      <circle cx="334" cy="374" r="11" fill="#f7f2e7" data-page-node-id="OY2F77mSyZzMCe2ecrvVzf"/>
+      <circle cx="374" cy="374" r="11" fill="#f7f2e7" data-page-node-id="m0J0xWw3F7Iq6q9PCeAFry"/>
+    </g>
+  </svg>
+
+  <!-- 物证层：一块纸，压着最扎人的那个换算 -->
+  <p class="t-clip" data-step="4" data-anim="fly down .6s" style="left:452px; top:640px; width:392px; font-size:27px; line-height:1.25;" data-page-node-id="KkNFJ0QU8whJSFw82YKmt2">每天 <b style="font-size:40px;" data-page-node-id="DT12hFCGzlOFyjYUEBZl8o">156</b> 分钟<br data-page-node-id="4UlUyUzRqJJHqzuntnYDoh"><span style="font-size:20px;" data-page-node-id="btHQQA0VNBSbegzVCFDSLe">≈ 两个半小时活在茧里</span></p>
+  <p class="t-label" data-step="4" data-anim="fade .5s @.24" style="left:452px; top:820px; width:520px; font-size:17px; letter-spacing:0.16em; color:rgb(247 242 231 / 0.8);" data-page-node-id="tPeQ9jLnQrENHvpjHJiXoM">每 100 人里，5 个人不在</p>
+  <p class="t-label" data-step="4" data-anim="fade .5s @.34" style="left:452px; top:866px; width:540px; font-size:14px; letter-spacing:0.1em; line-height:1.55; color:rgb(247 242 231 / 0.6);" data-page-node-id="moBacO3tUOk6ehOgLq466s">CNNIC 第 57 次《中国互联网络发展状况统计报告》2026.02<br>10.74 亿人</p>
+
+  <!-- ── 分栏：一条发丝，不是一堵墙 ──────────────────── -->
+  <div class="s-hair" style="left:1024px; top:168px; width:1px; height:756px; color:#f7f2e7; opacity:0.3;" data-page-node-id="vSepL07"></div>
+
+  <!-- ── 右：反证 ─────────────────────────────────────── -->
+  <p class="t-mega t-on-surface" data-step="5" data-anim="rise .7s" style="left:1088px; top:180px; font-size:176px;" data-page-node-id="Cedif2gJ3XmAsbwu8QVgNF">6<span class="dash" data-page-node-id="hfGHdOzPrjY7f9qLSOMvwe"></span>8<span style="font-size:0.34em; vertical-align:0.62em;" data-page-node-id="qds0TL9lDl8rZlx0e5ri7d">%</span></p>
+  <p class="t-h2 t-on-surface" data-step="5" data-anim="rise .6s @.18" style="left:1096px; top:398px; width:660px; font-size:34px;" data-page-node-id="ppN61tRJYt6WESSqxq4mzi">的英国公众，处在党派化的新闻回声室</p>
+
+  <p class="t-h1 t-on-surface" data-step="6" data-anim="rise .75s" style="left:1096px; top:506px; font-size:52px;" data-page-node-id="vbLbM1yLqHsFSpjEH7KT3k">但这是几千万人。</p>
+
+  <!-- 物证层：放大镜框住那几个人。玻璃是透明的，点落在圈里 -->
+  <img src="art/elem/lens.png" alt="" data-step="6" data-anim="zoom .8s"
+       style="left:1070px; top:590px; width:340px; height:340px; object-fit:contain;" data-page-node-id="xwShDlnIuJyKugI1B5zRg8">
+  <!-- 五个点在透镜之上（DOM 顺序在 img 之后）：镜片是实心黑，
+       点压在上面才读成「镜片里的像」，而不是「被玻璃挡住的点」。
+       坐标对着镜片圆心 (1240,760) 排，五个都落在圈里。 -->
+  <svg data-step="6" data-anim="fade .5s @.3" style="left:0px; top:0px; width:1920px; height:1080px;" viewBox="0 0 1920 1080" fill="none" data-page-node-id="9yRKFeVKMiYluTCDdYING9">
+    <!-- 一条线 + 五个人，线穿过镜片圆心（实测 1240,728）：五个点站成一行，
+         放大镜压在正中间，读作「就这几个人」。 -->
+    <line x1="1108" y1="728" x2="1382" y2="728" stroke="#f4f1ea" stroke-width="1" opacity="0.5" data-page-node-id="gpXRPX24Sfl2c6Eu8Gj8h9"/>
+    <g data-anim="fade .5s @.42" data-page-node-id="Ji3LBOwgtnUs6jg5MWvZ3p">
+      <circle cx="1135" cy="728" r="19" fill="#f4f1ea" data-page-node-id="KDuyYldSJ7xhUFGrVzvC2y"/>
+      <circle cx="1181" cy="728" r="19" fill="#f4f1ea" data-page-node-id="71cGA0bD0eoaksrYZ3zaE1"/>
+      <circle cx="1227" cy="728" r="19" fill="#f4f1ea" data-page-node-id="2FAKp3pdOvyCaiu6ix0QsZ"/>
+      <circle cx="1273" cy="728" r="19" fill="#f4f1ea" data-page-node-id="UihscpFGxbZr3nGPirapkr"/>
+      <circle cx="1319" cy="728" r="19" fill="#f4f1ea" data-page-node-id="ySVLVqw5O1Yozo7FHUlav5"/>
+    </g>
+  </svg>
+
+  <p class="t-label" style="left:1096px; top:948px; width:700px; font-size:15px; letter-spacing:0.1em; color:rgb(247 242 231 / 0.6);" data-page-node-id="UZgIph4Bb0MYDASof2MZ3O">同一个国家，不同的世界　·　Fletcher &amp; Nielsen 2017</p>
+</section>
+
+<!-- ═══ 07 实验 · 30 天窄化 ═══ -->
+<section data-auto-animate data-hold="4" data-st="mask" data-st-direction="down" data-st-mask-color="bg" data-st-duration="0.8" data-page-node-id="YBdLwKngDmzH32qqNGz0qk">
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#f7f2e7;" data-page-node-id="rAilP08"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:1176px; height:4px; border-radius:0;" data-page-node-id="pRogP08"></div>
+  <p class="t-label t-dim" style="left:120px; top:120px; width:360px;" data-page-node-id="fDDsfHSHuAaHahM3M2LbVM">CASE 04 · 犯罪时间线</p>
+  <p class="t-label t-dim" style="left:1740px; top:120px; width:60px; text-align:right;" data-page-node-id="vXiDUIclp1drwGYD4Tbn8f">07</p>
+
+  <p class="t-h1" style="left:120px; top:176px; font-size:60px;" data-page-node-id="a5YwQLldla9SqQFcGXdT79">30 天，首页只剩美食</p>
+  <p class="t-body" data-anim="fade .5s @.4" style="left:120px; top:262px; width:780px; font-size:26px;" data-page-node-id="pHSZL5DieSzWalXwM6MIgP">起点：八类内容兴趣相近，只有美食高一点点（12.5%）。</p>
+
+  <!-- 时间轴四步：每一步一行，右端是不断收窄的进度条 -->
+  <div class="s-hair" style="left:120px; top:344px; width:900px; height:1px;" data-page-node-id="i6Q86faeaarGiiFph2ET6C"></div>
+  <p class="t-type" data-step="1" data-anim="rise .4s" style="left:120px; top:372px; font-size:22px; color:#a39c90;" data-page-node-id="lu46yZmALxWz3Jki5tVfcE">DAY 01</p>
+  <p class="t-h2" data-step="1" data-anim="rise .45s" style="left:250px; top:362px; width:420px; font-size:34px;" data-page-node-id="r9XV5rAQ4jboywMV2Bxmm5">八类都能看到</p>
+  <div class="s-accent" data-step="1" data-anim="wipe left .55s" style="left:760px; top:378px; width:120px; height:14px; border-radius:0;" data-page-node-id="eycLAoP7Uyc2VxjTyYTLbh"></div>
+
+  <div class="s-hair" style="left:120px; top:454px; width:900px; height:1px;" data-page-node-id="3wpEovIqHKYxxpCCqEjtEK"></div>
+  <p class="t-type" data-step="2" data-anim="rise .4s" style="left:120px; top:482px; font-size:22px; color:#a39c90;" data-page-node-id="BtQuFFJt45hjtFplz3olmT">DAY 10</p>
+  <p class="t-h2" data-step="2" data-anim="rise .45s" style="left:250px; top:472px; width:420px; font-size:34px;" data-page-node-id="0T6ti1m3b7XpV7RUGEmdeH">美食开始变多</p>
+  <div class="s-accent" data-step="2" data-anim="wipe left .7s" style="left:760px; top:488px; width:280px; height:14px; border-radius:0;" data-page-node-id="aTx1Ga20XLoxRmNqXDByGp"></div>
+
+  <div class="s-hair" style="left:120px; top:564px; width:900px; height:1px;" data-page-node-id="Kb3CLtekgAWGlB6La5cLX9"></div>
+  <p class="t-type" data-step="3" data-anim="rise .4s" style="left:120px; top:592px; font-size:22px; color:#a39c90;" data-page-node-id="QMLaQl0Uq157NPGwYvUD6V">DAY 20</p>
+  <p class="t-h2" data-step="3" data-anim="rise .45s" style="left:250px; top:582px; width:420px; font-size:34px;" data-page-node-id="YCPbHzW3McBIEx8Fyx0ECJ">一半是美食</p>
+  <div class="s-accent" data-step="3" data-anim="wipe left .85s" style="left:760px; top:598px; width:560px; height:14px; border-radius:0;" data-page-node-id="iP4ALAHbb43S0DtmP4UxBM"></div>
+
+  <div class="s-hair" style="left:120px; top:674px; width:900px; height:1px;" data-page-node-id="oSmzuBOMGFqon7Gf3RiMtQ"></div>
+  <p class="t-type" data-step="4" data-anim="rise .4s" style="left:120px; top:702px; font-size:22px; color:#c4141f;" data-page-node-id="wTjRb4GUz2zFFu8u09uuGd">DAY 30</p>
+  <p class="t-h2" data-step="4" data-anim="rise .45s" style="left:250px; top:692px; width:460px; font-size:34px;" data-page-node-id="PyGBTzXVDofom7mZkmgp4y">只剩美食</p>
+  <div class="s-surface" data-step="4" data-anim="wipe left 1s" style="left:760px; top:708px; width:900px; height:14px; border-radius:0;" data-page-node-id="fXcHWANjGb7n5hFGswNMw8"></div>
+
+  <!-- 物证层：阶梯。越往上越窄，红折线是走法 -->
+  <img src="art/elem/stairs-light.png" alt="" data-step="5" data-anim="fade 1s"
+       style="left:1360px; top:130px; width:420px; height:415px; object-fit:contain; opacity:0.9;" data-page-node-id="2DcxL6iDYC6jN9N1WqAMOK">
+  <p class="t-label t-dim" data-step="5" data-anim="fade .5s" style="left:1360px; top:566px; width:420px;" data-page-node-id="Fu8UHDFtBRY1WKP2nz3pmT">每上一级，能看见的就越少</p>
+
+  <div class="s-hair" style="left:120px; top:820px; width:1680px; height:1px;" data-page-node-id="xkBkiQkatehc6gVOLeA8fz"></div>
+  <p class="t-h2" data-anim="fade .5s @.8" style="left:120px; top:852px; width:1400px; font-size:38px;" data-page-node-id="TGNBohhZHafuCWyyZJ02ox">关上门的不是算法，是「你看 → 它记 → 再推 → 又看」。</p>
+  <p class="t-label t-dim" style="left:120px; top:944px; width:1000px; font-size:20px;" data-page-node-id="32N3lXyHOly1kcUiLVEfcn">对照组：若不形成反馈循环，60 天后主导类仅约三成　·　情景推演，非真实用户追踪</p>
+</section>
+
+<!-- ═══ 08 物证墙 · 纸白换气页 ═══ -->
+<section data-auto-animate data-hold="6" data-st="mask" data-st-direction="up" data-st-mask-color="accent" data-st-duration="0.9" data-page-node-id="pBbbJGDatwouVkBZXMW0Hv">
+  <div class="s-paper" style="left:0px; top:0px; width:1920px; height:1080px;" data-page-node-id="XkcEuktc6nMUVGfeevzqlJ"></div>
+
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#0b0b0b;" data-page-node-id="ucFgx5wDcxKkreF6XU1euR"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:1344px; height:4px; border-radius:0; background:#0b0b0b;" data-page-node-id="rhkHltt325BORMIpUglDau"></div>
+  <p class="t-label t-on-paper-dim" style="left:120px; top:112px;" data-page-node-id="5E60GwX9h7qk1MK0ycQbRn">CASE 05 · 物证</p>
+  <p class="t-label t-on-paper-dim" style="left:1740px; top:112px; width:60px; text-align:right;" data-page-node-id="yJFLYto5nZRFozlrzIgGtP">08</p>
+
+  <!-- 贯穿全场的红线：四件物证挂在同一条线上 -->
+  <div class="s-redline" style="left:120px; top:236px; width:1680px; height:2px;" data-page-node-id="0zv5xlq3OuWNe5mKWnRHKw"></div>
+
+  <!-- 01 -->
+  <div class="s-group" data-step="1" data-anim="fly right .55s" style="left:120px; top:280px; width:380px; height:660px;" data-page-node-id="xFNeoF7JKm8Kqf39aOruHE">
+    <div class="s-redline" style="left:188px; top:-44px; width:2px; height:44px;" data-page-node-id="rflwPr18gJHIwTovdtpVZ4"></div>
+    <div class="s-pin" style="left:182px; top:-50px; width:14px; height:14px;" data-page-node-id="TZpYUQ5K8pXhAyNXgTvvKg"></div>
+    <div style="left:0px; top:0px; width:380px; height:498px; background:#f4f1ea; box-shadow:0 0 0 1px rgb(11 11 11 / 0.16);" data-page-node-id="0IJh9mWraqfIe4425770BV"></div>
+    <img src="art/ev01.jpg" alt="" style="left:13px; top:13px; width:354px; height:440px; object-fit:cover;" data-page-node-id="ASOfr6AqGm1eTrBeJ076qA">
+    <p class="t-type" data-anim="fade .4s" style="left:13px; top:460px; width:354px; font-size:20px; color:#0b0b0b;" data-page-node-id="LgLC4Bi0FO82Ae4ZG9SnlZ">28 / 07 / 02:47</p>
+    <p class="t-plate t-label" style="left:0px; top:512px; font-size:18px;" data-page-node-id="hF9laJu7IWVVzeTlQE3f5q">EXHIBIT 01</p>
+    <p class="t-body t-on-paper" style="left:0px; top:562px; width:380px; font-size:26px;" data-page-node-id="6ifosb0Tnm4b9gIa0njOQn">六条标签，六条红线</p>
+    <div class="s-tape" style="left:-16px; top:-16px; width:96px; height:30px; transform:rotate(-38deg);" data-page-node-id="I8hPS3xLLV2BItLwkva7MM"></div>
+  </div>
+
+  <!-- 02 -->
+  <div class="s-group" data-step="2" data-anim="fly right .55s" style="left:550px; top:280px; width:380px; height:660px;" data-page-node-id="jZtzNCDbBQrQF8aMkcM9gE">
+    <div class="s-redline" style="left:188px; top:-44px; width:2px; height:44px;" data-page-node-id="3F3AJVRfNixxJZxTg3scCa"></div>
+    <div class="s-pin" style="left:182px; top:-50px; width:14px; height:14px;" data-page-node-id="TC4tXGaHIe6DeP6RGF5JC3"></div>
+    <div style="left:0px; top:0px; width:380px; height:498px; background:#f4f1ea; box-shadow:0 0 0 1px rgb(11 11 11 / 0.16);" data-page-node-id="vgMCSKIYSyMoUc6BXBjgPx"></div>
+    <img src="art/ev02.jpg" alt="" style="left:13px; top:13px; width:354px; height:440px; object-fit:cover;" data-page-node-id="WVb0TAmksQnpkTDUDhNfxX">
+    <p class="t-type" data-anim="fade .4s" style="left:13px; top:460px; width:354px; font-size:20px; color:#0b0b0b;" data-page-node-id="qYDSk1p8unJpQVfkiEGkrP">28 / 07 / 03:12</p>
+    <p class="t-plate t-label" style="left:0px; top:512px; font-size:18px;" data-page-node-id="F8FbhFICdCsadpBE5WPed5">EXHIBIT 02</p>
+    <p class="t-body t-on-paper" style="left:0px; top:562px; width:380px; font-size:26px;" data-page-node-id="YnZoFFFkfYYfRXAOHE05aj">同质化内容，一层套一层</p>
+    <div class="s-tape" style="left:300px; top:-16px; width:96px; height:30px; transform:rotate(38deg);" data-page-node-id="YkUNBRHabwZ88ZSWfaskiu"></div>
+  </div>
+
+  <!-- 03 -->
+  <div class="s-group" data-step="3" data-anim="fly right .55s" style="left:980px; top:280px; width:380px; height:660px;" data-page-node-id="eJd6B3v5BGhDCHtVBHUw2N">
+    <div class="s-redline" style="left:188px; top:-44px; width:2px; height:44px;" data-page-node-id="RerSELFTRNSHXTBOiAoBSR"></div>
+    <div class="s-pin" style="left:182px; top:-50px; width:14px; height:14px;" data-page-node-id="A3nTsJMM3UChdSAEUi9WTj"></div>
+    <div style="left:0px; top:0px; width:380px; height:498px; background:#f4f1ea; box-shadow:0 0 0 1px rgb(11 11 11 / 0.16);" data-page-node-id="HCRhPJ98tV0pPE8xv1ChH5"></div>
+    <img src="art/ev03.jpg" alt="" style="left:13px; top:13px; width:354px; height:440px; object-fit:cover;" data-page-node-id="uz9QB42fx9kFYmnV6pR75x">
+    <p class="t-type" data-anim="fade .4s" style="left:13px; top:460px; width:354px; font-size:20px; color:#0b0b0b;" data-page-node-id="SiPH9G6HimvuXXHLT6DclJ">28 / 07 / 03:40</p>
+    <p class="t-plate t-label" style="left:0px; top:512px; font-size:18px;" data-page-node-id="kHYMTNCILHe1NI5tvIuM2M">EXHIBIT 03</p>
+    <p class="t-body t-on-paper" style="left:0px; top:562px; width:380px; font-size:26px;" data-page-node-id="RkteymKCH1Vg26QBF5cFDS">越走越窄</p>
+    <div class="s-tape" style="left:-16px; top:-16px; width:96px; height:30px; transform:rotate(-38deg);" data-page-node-id="DWkZdnxYy6ybb6bfFbwIZG"></div>
+  </div>
+
+  <!-- 04 -->
+  <div class="s-group" data-step="4" data-anim="fly right .55s" style="left:1410px; top:280px; width:380px; height:660px;" data-page-node-id="BW0iQtIVCjmwpOJvhO510a">
+    <div class="s-redline" style="left:188px; top:-44px; width:2px; height:44px;" data-page-node-id="FePfIKPguRqZJH10aevuuy"></div>
+    <div class="s-pin" style="left:182px; top:-50px; width:14px; height:14px;" data-page-node-id="YAQFUZqNwsW5RBQVtqYBQe"></div>
+    <div style="left:0px; top:0px; width:380px; height:498px; background:#f4f1ea; box-shadow:0 0 0 1px rgb(11 11 11 / 0.16);" data-page-node-id="1XeBAxKQlCxKY9rzqZOaNk"></div>
+    <img src="art/ev04.jpg" alt="" style="left:13px; top:13px; width:354px; height:440px; object-fit:cover;" data-page-node-id="aXFUAYEKgkDUfDMGjZTXlE">
+    <p class="t-type" data-anim="fade .4s" style="left:13px; top:460px; width:354px; font-size:20px; color:#0b0b0b;" data-page-node-id="29ZVn8v2pqh4Q25C4o7JLG">28 / 07 / 04:05</p>
+    <p class="t-plate t-label" style="left:0px; top:512px; font-size:18px;" data-page-node-id="7ahABAC6JZOZkGRzIpPinL">EXHIBIT 04</p>
+    <p class="t-body t-on-paper" style="left:0px; top:562px; width:380px; font-size:26px;" data-page-node-id="hDErmFWiHt6cvwfIGhbsU1">自己织的那个壳</p>
+    <div class="s-tape" style="left:300px; top:-16px; width:96px; height:30px; transform:rotate(38deg);" data-page-node-id="TevOSRT34nQCXdwvy2MFvc"></div>
+  </div>
+
+  <!-- 收束：四件物证摆完，判决才落下。
+       试过在照片中间落四个图钉、也试过一条红线横贯 —— 图钉像脏点，红线从照片中部穿过去压内容。
+       这一页的收束交给这一句：四件都看完了，才说得出口。 -->
+  <p class="t-h2 t-on-paper" data-step="5" data-anim="rise .6s" style="left:120px; top:938px; width:1680px; font-size:38px;" data-page-node-id="1uGXIrMFceqWuf914CNsnx">四件物证指向同一件事：<em class="r-key" style="font-style:normal;" data-page-node-id="mrwICtsgbWgzizCvDDMkik">候选池是被人缩小的</em></p>
+</section>
+
+<!-- ═══ 09 症状 · 三栏失能 + 追光 ═══ -->
+<section data-auto-animate data-hold="5" data-st="mask" data-st-direction="left" data-st-mask-color="bg" data-st-duration="0.7" data-page-node-id="1ifzYLbUO6ahEpOecCt35K">
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#f7f2e7;" data-page-node-id="rAilP10"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:1512px; height:4px; border-radius:0;" data-page-node-id="pRogP10"></div>
+  <!-- 内容层常显。不用 data-lit：那是硬裁剪，光束外的三栏会整块消失，
+       而三栏横向铺满时没有任何一个锥形能同时罩住三列。光在这里是「打的灯」，不是「遮片」。 -->
+  <div class="s-group" style="left:0px; top:0px; width:1920px; height:1080px;" data-page-node-id="Gfuosq0EGNOEaVtGzT8Q4i">
+    <p class="t-label t-dim" style="left:120px; top:120px;" data-page-node-id="5YvVdqP7RpboyFdWEmCO6d">CASE 06 · 受害者群像</p>
+    <p class="t-label t-dim" style="left:1740px; top:120px; width:60px; text-align:right;" data-page-node-id="GHs1M2vPUFE19wlbAJIHwD">09</p>
+
+    <p class="t-h1" style="left:120px; top:176px; font-size:60px;" data-page-node-id="Gxz2kGGpKH59j1n0OIjDVw">三种失能，同时发生</p>
+    <p class="t-body t-dim" style="left:120px; top:264px; width:880px; font-size:26px;" data-page-node-id="8wCf4Xc2o517lcgUW8t5K6">不是一个人被害，是一整层人同时失去判断力。</p>
+
+    <!-- 01 -->
+    <p class="t-mega" data-step="1" data-anim="fade .5s" style="left:120px; top:368px; font-size:116px; color:rgb(244 241 234 / 0.17);" data-page-node-id="HM0otdkBOQOV8UiB6UXwl8">01</p>
+    <div class="s-accent" data-step="1" data-anim="rise .5s" style="left:124px; top:528px; width:74px; height:3px; border-radius:0;" data-page-node-id="Ztwo1M72vNFoza3rpp2Xrp"></div>
+    <p class="t-h2" data-step="1" data-anim="rise .5s" style="left:120px; top:556px; width:480px; font-size:42px;" data-page-node-id="Up9yZrZQjAW5fcOw5VlBgS">跨界能力丧失</p>
+    <p class="t-body t-dim" data-step="1" data-anim="fade .5s" style="left:120px; top:630px; width:460px; font-size:22px; line-height:1.75;" data-page-node-id="9QV02BFUkfKx7jQge5k7kk">只看一类，就再也接不上别的领域。</p>
+
+    <!-- 02 -->
+    <p class="t-mega" data-step="2" data-anim="fade .5s" style="left:720px; top:368px; font-size:116px; color:rgb(244 241 234 / 0.17);" data-page-node-id="jC7waiczxJMuoBrTrohYhZ">02</p>
+    <div class="s-accent" data-step="2" data-anim="rise .5s" style="left:724px; top:528px; width:74px; height:3px; border-radius:0;" data-page-node-id="oH4ByLY5lIsrACmT6rNKSC"></div>
+    <p class="t-h2" data-step="2" data-anim="rise .5s" style="left:720px; top:556px; width:480px; font-size:42px;" data-page-node-id="p5AtwDYkGazbGFZ8C4OpMl">批判思维退化</p>
+    <p class="t-body t-dim" data-step="2" data-anim="fade .5s" style="left:720px; top:630px; width:460px; font-size:22px; line-height:1.75;" data-page-node-id="lc14w7eMR4XRud6SVTzmDW">信息都替你筛好了，你只剩接受这一动作。</p>
+
+    <!-- 03 -->
+    <p class="t-mega" data-step="3" data-anim="fade .5s" style="left:1320px; top:368px; font-size:116px; color:rgb(244 241 234 / 0.17);" data-page-node-id="YoYVPLlbk8iT8GbeZPtaJp">03</p>
+    <div class="s-accent" data-step="3" data-anim="rise .5s" style="left:1324px; top:528px; width:74px; height:3px; border-radius:0;" data-page-node-id="ZMGuX07NTHRbF5BDu0svL0"></div>
+    <p class="t-h2" data-step="3" data-anim="rise .5s" style="left:1320px; top:556px; width:480px; font-size:42px;" data-page-node-id="QrkZNrTORzMF0yfpCV05mR">深度思考消亡</p>
+    <p class="t-body t-dim" data-step="3" data-anim="fade .5s" style="left:1320px; top:630px; width:460px; font-size:22px; line-height:1.75;" data-page-node-id="GcTyV2ES1PS3XuvtEYFxVa">三分钟一条，脑子只记得住开头。</p>
+
+    <div class="s-hair" data-step="4" data-anim="fade .5s" style="left:120px; top:812px; width:1680px; height:1px;" data-page-node-id="W0FLwAjO2hosTp6vxP4qgu"></div>
+    <p class="t-h2" data-step="4" data-anim="fade .6s" style="left:120px; top:848px; width:1500px; font-size:40px;" data-page-node-id="qWcM9VxFy3dKTzrrzuRdBI">算法没有恶意，<em class="r-key" style="font-style:normal;" data-page-node-id="y3UwyYj0YoGOwAT0dGw0JM">只是把「留住你」执行得很好</em></p>
+  </div>
+
+  <!-- 诊断卡：不在追光层里，否则会被遮黑。钉在右上，让数据成为第二层线索 -->
+  <div class="s-group" data-anim="fly down .6s @.7" style="left:1240px; top:170px; width:540px; height:186px;" data-page-node-id="FSqFIjslgPreCPlIBqVcP9">
+    <div style="left:0px; top:0px; width:540px; height:186px; background:#f4f1ea; box-shadow:0 0 0 1px rgb(11 11 11 / 0.2);" data-page-node-id="BELroXqnMwP2wAvE0akfT1"></div>
+    <div class="s-pin" style="left:262px; top:-7px; width:16px; height:16px;" data-page-node-id="Qw0tUEYwo8H63UO9DUx8iO"></div>
+    <p class="t-type" style="left:26px; top:22px; width:490px; font-size:15px; color:#8a1019; letter-spacing:0.18em;" data-page-node-id="rJLnotXDNkcC2urUbO9Bzz">DIAGNOSIS CARD</p>
+    <p class="t-type" style="left:26px; top:50px; width:490px; font-size:42px; color:#0b0b0b;" data-page-node-id="ctndRkom6bePviiSNIBixx">3.21<span style="font-size:22px; color:#5b564e;" data-page-node-id="IkHE6yg5x0IfM4RKruoiBQ"> / 5</span></p>
+    <p class="t-type" style="left:26px; top:112px; width:490px; font-size:17px; color:#5b564e;" data-page-node-id="YNtEWIaAA5d1YkVWWDfFV2">知识共享得分，全维度最低</p>
+    <p class="t-type" style="left:26px; top:144px; width:490px; font-size:17px; color:#5b564e;" data-page-node-id="Bt7wYFsrhvHrdXydu3C6H7">β = −0.25　纯娱乐使用对创新的系数</p>
+  </div>
+
+  <!-- 光源在画外：只看得见那道扫下来的光 -->
+  <div class="s-group" data-light="beam" data-light-spread="31" data-light-width="80" data-pivot="60 520"
+       data-path="0 960 -400 145; 2.4 960 -400 166; 4.8 960 -400 180"
+       style="left:900px; top:-520px; width:120px; height:520px; opacity:0;" data-page-node-id="CjevwfyY32QsiRdX5YPX8y"></div>
+</section>
+
+<!-- ═══ 10 结尾 · 破茧 ═══ -->
+<section data-auto-animate data-hold="9" data-st="mask" data-st-direction="up" data-st-mask-color="accent" data-st-duration="0.55" data-page-node-id="7PJ4NpRgS8XhWbyLUE31Vg">
+  <img src="art/07-breach.jpg" alt="" style="left:0px; top:0px; width:1920px; height:1080px; object-fit:cover;" data-page-node-id="HOdQHOOCHd1K9757Q1LMQd">
+  <div class="s-ink" style="left:0px; top:0px; width:1920px; height:1080px; opacity:0.36; border-radius:0;" data-page-node-id="PdunrZFmySn0883a3ztYQQ"></div>
+  <div class="s-vignette" style="left:0px; top:0px; width:1920px; height:1080px; opacity:0.9;" data-page-node-id="sNPV9T60BkPzzMy89jLRLs"></div>
+  <div class="s-scrim-l" style="left:0px; top:0px; width:1420px; height:1080px;" data-page-node-id="qjLbBglhHAlduKkj0KTllm"></div>
+
+  <div data-id="rail" class="s-hair" style="left:120px; top:80px; width:1680px; height:2px; color:#f7f2e7;" data-page-node-id="rAilP11"></div>
+  <div data-id="prog" class="s-accent" style="left:120px; top:79px; width:1680px; height:4px; border-radius:0;" data-page-node-id="pRogP11"></div>
+
+  <p class="t-label t-dim" style="left:120px; top:120px;" data-page-node-id="CL02o7rMumxP8eVmYx8Zqh">VERDICT · 结案陈词</p>
+  <p class="t-label t-dim" style="left:1740px; top:120px; width:60px; text-align:right;" data-page-node-id="y3zEpUgH7nlEFnG0QufgcR">10</p>
+
+  <!-- 结案的三拍：读完判决 → 给出行动 → 最后盖章。
+       章压在最后，是因为盖章是「这件事定案了」这个动作，不是装饰。 -->
+  <p class="t-h1 t-on-surface" data-step="1" data-anim="rise .75s" style="left:120px; top:520px;" data-page-node-id="fbEmYGB8Fz1CR3BQOHqNiO">伤害不是均匀的</p>
+  <p class="t-h1 t-on-surface" data-step="1" data-anim="rise .75s @.18" style="left:120px; top:614px;" data-page-node-id="JBkn5pWw9So1erHuumfRbE">它精确投放给最难自救的人</p>
+  <div class="s-accent" data-step="2" data-anim="wipe left .8s" style="left:120px; top:740px; width:520px; height:3px; border-radius:0;" data-page-node-id="HJY66dJgVUqZFAVNbqc4FO"></div>
+  <p class="t-body" data-step="2" data-anim="fade .6s @.35" style="left:120px; top:782px; width:1400px; color:rgb(244 241 234 / 0.82);" data-page-node-id="n2lJnf0gEOps2bubwgT1LN">关掉个性化推荐　·　追问排序依据　·　行使你的退出权</p>
+  <p class="t-label t-dim" data-step="3" data-anim="fade .6s" style="left:120px; top:960px;" data-page-node-id="gNtGAd2GA4ZDHZhy5JfwHf">《算法推荐管理规定》第十七条　2022.03.01 施行</p>
+
+  <!-- 物证层：最后一枚章，盖在判决旁边 -->
+  <p class="t-stamp t-label" data-step="4" data-anim="zoom .7s" style="left:1520px; top:640px;" data-page-node-id="G4WYC3mQfP7RmBrHAMEBHH">CASE CLOSED</p>
+</section>
+
+</div>
+</div>
+<script src="vendor/node_modules/reveal.js/dist/reveal.js"></script>
+<script src="vendor/node_modules/gsap/dist/gsap.min.js"></script>
+<script src="vendor/runtime/engine.js"></script>
+<script>
+/* ── 自动演播 ────────────────────────────────────────────────
+   引擎已经把两个动作封成了公共接口：
+     window.__orcaAdvance()  往前推（有页内分步就推一拍，没有就翻页）
+     window.__orcaBusy()     这一拍还要放多久（秒）
+   所以这里不用抄任何时长表，只在动作之间插留白。
+   人一按翻页键就立刻交还控制权，不跟人抢。 */
+(() => {
+  if (new URLSearchParams(location.search).has('capture')) return;   // 录制/导 PPTX 时不加 UI
+
+  const STEP_DWELL = 1.1;    // 两拍之间的留白（动画本身照常放完，不截断）
+  const TAIL = 2.6;          // 末拍放完，停多久翻页
+  const FIRST_TAIL = 3.4;    // 封面多留一会儿
+  const LAST_TAIL = 5.4;     // 结尾留足
+
+  let playing = false;
+  let runId = 0;
+
+  /* ── 控制条 ── */
+  const style = document.createElement('style');
+  style.textContent = [
+    '#autoBar{position:fixed;right:34px;bottom:28px;z-index:60;display:flex;align-items:center;gap:13px;',
+    'padding:9px 15px 9px 14px;background:rgb(11 11 11 / .84);border:1px solid rgb(247 242 231 / .16);',
+    'color:rgb(247 242 231 / .58);font:500 15px/1 "Noto Sans SC",system-ui,sans-serif;letter-spacing:.15em;',
+    'cursor:pointer;user-select:none;transition:opacity .35s,border-color .35s,color .35s}',
+    '#autoBar:hover{color:rgb(247 242 231 / .96);border-color:rgb(247 242 231 / .4)}',
+    '#autoBar .ln{display:block;width:92px;height:2px;background:#c4141f;transform-origin:left;',
+    'transform:scaleX(0);opacity:0;transition:transform .2s linear}',
+    '#autoBar .tx{min-width:5.2em;text-align:center}',
+    '#autoBar kbd{font:500 12px/1 ui-monospace,SFMono-Regular,monospace;padding:3px 6px;',
+    'border:1px solid rgb(247 242 231 / .22);color:rgb(247 242 231 / .42);letter-spacing:0}',
+    '#autoBar.on{color:rgb(247 242 231 / .96);border-color:rgb(196 20 31 / .6)}',
+    '#autoBar.on .ln{opacity:1}',
+    '#autoBar.light{background:rgb(250 248 244 / .93);border-color:rgb(11 11 11 / .16);color:rgb(11 11 11 / .58)}',
+    '#autoBar.light:hover{color:rgb(11 11 11 / .95);border-color:rgb(11 11 11 / .42)}',
+    '#autoBar.light.on{color:rgb(11 11 11 / .95);border-color:rgb(196 20 31 / .62)}',
+    '#autoBar.light kbd{border-color:rgb(11 11 11 / .22);color:rgb(11 11 11 / .4)}',
+    'body.idle #autoBar{opacity:.45}',
+    'body.idle #autoBar.on{opacity:1}'
+  ].join('');
+  document.head.appendChild(style);
+
+  const bar = document.createElement('div');
+  bar.id = 'autoBar';
+  bar.innerHTML = '<i class="ln"></i><span class="tx">自动演播</span><kbd>P</kbd>';
+  document.body.appendChild(bar);
+  const line = bar.querySelector('.ln');
+  const tx = bar.querySelector('.tx');
+
+  function paint(sec) {
+    line.style.transition = 'none';
+    line.style.transform = 'scaleX(1)';
+    void line.offsetWidth;
+    line.style.transition = 'transform ' + sec + 's linear';
+    line.style.transform = 'scaleX(0)';
+  }
+
+  const stepState = () => (window.__orcaStep ? window.__orcaStep() : { done: 0, clicks: 0 });
+  const busyNow = () => (window.__orcaBusy ? window.__orcaBusy() : 0);
+
+  // 控制条要压在纸白页上也读得清：跟着当前页最大色块的亮度换皮
+  function refreshTheme() {
+    const sl = Reveal && Reveal.getCurrentSlide ? Reveal.getCurrentSlide() : null;
+    if (!sl) return;
+    const surf = sl.querySelector('.s-surface, .s-paper');
+    let lum = 16;
+    if (surf) {
+      const m = getComputedStyle(surf).backgroundColor.match(/[0-9.]+/g);
+      if (m && m.length >= 3) lum = m[0] * 0.299 + m[1] * 0.587 + m[2] * 0.114;
+    }
+    bar.classList.toggle('light', lum > 140);
+  }
+
+  function tailFor(i, n) {
+    if (i >= n - 1) return LAST_TAIL;
+    return i === 0 ? FIRST_TAIL : TAIL;
+  }
+
+  async function run() {
+    const id = ++runId;
+    const alive = () => playing && runId === id;
+    const nap = async (s) => {
+      const end = performance.now() + s * 1000;
+      while (performance.now() < end) {
+        if (!alive()) return false;
+        await new Promise((r) => setTimeout(r, 40));
+      }
+      return alive();
+    };
+    // 进页的自动动画先放完
+    let b = busyNow();
+    while (b > 0.04 && alive()) {
+      paint(b);
+      await nap(Math.min(0.4, b + 0.06));
+      b = busyNow();
+    }
+
+    while (alive()) {
+      const st = stepState();
+      // 还有没推的拍：留白后推一下，再等它放完
+      if (st.clicks > 0 && st.done < st.clicks) {
+        paint(STEP_DWELL);
+        if (!(await nap(STEP_DWELL))) return;
+        window.__orcaAdvance();
+        let bb = busyNow();
+        while (bb > 0.04 && alive()) {
+          paint(bb);
+          await nap(Math.min(0.4, bb + 0.06));
+          bb = busyNow();
+        }
+        continue;
+      }
+      // 这一页放完了：停够尾留白再翻
+      const i = Reveal.getIndices().h;
+      const n = Reveal.getTotalSlides();
+      if (i >= n - 1) { stop(); return; }
+      const t = tailFor(i, n);
+      paint(t);
+      if (!(await nap(t))) return;
+      window.__orcaAdvance({ page: true });
+      await nap(0.12);
+      let b2 = busyNow();
+      while (b2 > 0.04 && alive()) {
+        paint(b2);
+        await nap(Math.min(0.4, b2 + 0.06));
+        b2 = busyNow();
+      }
+    }
+  }
+
+  function start() {
+    if (playing) return;
+    playing = true;
+    bar.classList.add('on');
+    tx.textContent = '停止演播';
+    run();
+  }
+
+  function stop() {
+    if (!playing) return;
+    playing = false;
+    runId++;
+    bar.classList.remove('on');
+    tx.textContent = '自动演播';
+    line.style.transition = 'transform .3s ease-out';
+    line.style.transform = 'scaleX(0)';
+  }
+
+  bar.addEventListener('click', (e) => { e.stopPropagation(); playing ? stop() : start(); });
+
+  if (window.Reveal && Reveal.on) {
+    Reveal.on('ready', refreshTheme);
+    Reveal.on('slidechanged', refreshTheme);
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'p' || e.key === 'P') { e.preventDefault(); playing ? stop() : start(); return; }
+    if (playing && ['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', ' ', 'PageDown', 'PageUp', 'Home', 'End'].includes(e.key)) stop();
+  });
+
+  // 鼠标不动 2.5 秒就把按钮压暗，免得挂在投影上抢眼球
+  let idleT = null;
+  const wake = () => {
+    document.body.classList.remove('idle');
+    clearTimeout(idleT);
+    idleT = setTimeout(() => document.body.classList.add('idle'), 2500);
+  };
+  window.addEventListener('mousemove', wake);
+  wake();
+
+  // ?play 打开就跑：讲的时候挂个链接，不用再点
+  if (new URLSearchParams(location.search).has('play')) {
+    if (window.Reveal && Reveal.on) Reveal.on('ready', () => setTimeout(start, 700));
+  }
+})();
+
+</script>
+</body>
+</html>
